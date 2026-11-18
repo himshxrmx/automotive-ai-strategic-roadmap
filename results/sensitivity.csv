@@ -1,0 +1,8 @@
+driver,low_case_cash_cr,high_case_cash_cr,low_case_peak_need_cr,high_case_peak_need_cr,swing
+Fleet churn 25% / 8% a year,-22.0,-19.7,26.1,25.6,2.3000000000000007
+Fleet subscription ₹249 / ₹349 per month,-24.1,-17.3,27.1,24.8,6.800000000000001
+Acquisition cost ×1.5 / ×0.5,-28.2,-13.2,30.0,22.8,15.0
+Unit volumes −30% / +30%,-29.1,-12.3,29.7,23.7,16.8
+"OEM royalty ₹600 / ₹1,800 per vehicle",-29.4,-12.0,30.1,23.6,17.4
+Fixed operating cost +20% / −20%,-30.4,-11.0,33.2,19.2,19.4
+"BOM cost ₹6,000 / ₹9,000",-4.4,-37.1,20.3,37.1,32.7

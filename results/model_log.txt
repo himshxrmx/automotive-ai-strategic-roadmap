@@ -1,0 +1,42 @@
+                             phase months  duration  headcount  person_months  personnel_lakh  non_personnel_lakh  contingency_lakh  total_lakh
+0        P0 Discovery and research    1-3         3          5             15            30.0                  17               7.0        54.0
+1            P1 Data and prototype    4-9         6         12             72           134.4                  88              33.4       255.8
+2                   P2 Fleet pilot  10-15         6         20            120           215.4                  85              45.1       345.5
+3  P3 Validation and certification  16-21         6         23            138           252.6                 180              64.9       497.5
+4             P4 Commercial launch  22-27         6         31            186           312.6                 133              66.8       512.4
+5     P5 OEM integration and scale  28-36         9         36            324           531.0                 187             107.7       825.7
+build total ₹ lakh 2490.9
+                                   0       1
+channel                        fleet  retail
+hardware_net_of_gst            10169   13558
+channel_margin                     0    2712
+unit_cost                       8350    8350
+warranty                         305     407
+installation                     600     600
+hardware_contribution            914    1490
+subscription_net               253.4   126.3
+running_cost_per_month            70      70
+monthly_contribution           183.4     2.2
+expected_life_months            74.3    28.4
+cac                             1500    1200
+ltv                            14547    1552
+ltv_to_cac                       9.7     1.3
+cac_payback_months               3.2     0.0
+hardware_gross_margin_pct       17.9    23.0
+subscription_gross_margin_pct   72.4    44.6
+          revenue  rev_hardware  rev_subscription      rev_oem         cogs         cac         opex      ebitda  active_units_end  oem_units     cash_end
+year                                                                                                                                                      
+1             0.0           0.0               0.0          0.0          0.0         0.0   48254000.0 -48254000.0               0.0        0.0  -48254000.0
+2      18522205.0    17957880.0          564325.0          0.0   16211179.0   2403000.0   92644000.0 -92735974.0            1694.0        0.0 -140989974.0
+3     219987790.0   189583920.0        19147870.0   11256000.0  176485384.0  25002000.0  108192000.0 -89691594.0           17789.0     9380.0 -230681568.0
+4     502210550.0   377987760.0        66622790.0   57600000.0  365422496.0  49626000.0  114074001.0 -26911947.0           46156.0    48000.0 -257593515.0
+5     797634993.0   554670170.0       136980823.0  105984000.0  551350116.0  72537000.0  123199921.0  50547956.0           82946.0    88320.0 -207045559.0
+{'first_month_ebitda_stays_positive': 48, 'active_units_at_breakeven': 46155, 'peak_funding_need_cr': np.float64(25.81), 'peak_funding_month': 47, 'cash_breakeven_month': None, 'five_year_cumulative_cash_cr': np.float64(-20.7), 'person_months': 855}
+                                     driver  low_case_cash_cr  high_case_cash_cr  low_case_peak_need_cr  high_case_peak_need_cr  swing
+3               Fleet churn 25% / 8% a year             -22.0              -19.7                   26.1                    25.6    2.3
+1  Fleet subscription ₹249 / ₹349 per month             -24.1              -17.3                   27.1                    24.8    6.8
+5              Acquisition cost ×1.5 / ×0.5             -28.2              -13.2                   30.0                    22.8   15.0
+2                  Unit volumes −30% / +30%             -29.1              -12.3                   29.7                    23.7   16.8
+4     OEM royalty ₹600 / ₹1,800 per vehicle             -29.4              -12.0                   30.1                    23.6   17.4
+6          Fixed operating cost +20% / −20%             -30.4              -11.0                   33.2                    19.2   19.4
+0                  BOM cost ₹6,000 / ₹9,000              -4.4              -37.1                   20.3                    37.1   32.7

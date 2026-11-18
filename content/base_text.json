@@ -1,0 +1,999 @@
+[
+ [
+  "p",
+  "Strategic Roadmap for Automotive AI Innovation",
+  null
+ ],
+ [
+  "p",
+  "Saarthi Copilot: An Edge-AI Driver Safety and Vehicle Health Co-pilot for Indian Roads",
+  null
+ ],
+ [
+  "p",
+  "Automotive AI Innovation Internship (YuvaIntern)",
+  "Internship:"
+ ],
+ [
+  "p",
+  "Week 1: Strategic Roadmap for Automotive AI Innovation",
+  "Task:"
+ ],
+ [
+  "p",
+  "Him Sharma",
+  "Prepared by:"
+ ],
+ [
+  "p",
+  "November 2026",
+  "Date:"
+ ],
+ [
+  "h",
+  1,
+  "1. Executive Summary"
+ ],
+ [
+  "p",
+  "Road crashes kill about 1.19 million people worldwide every year, and India carries a heavy share of that burden: in 2022 alone the country recorded 4,61,312 road accidents and 1,68,491 deaths. Most of these crashes trace back to human factors such as fatigue, distraction and over-speeding. Advanced driver assistance systems (ADAS) can prevent many of them, but in India they are still found mainly on top variants of newer cars and are usually tuned for orderly, well-marked roads rather than mixed traffic.",
+  null
+ ],
+ [
+  "p",
+  "This report sets out a three-year strategic roadmap for Saarthi Copilot, a hypothetical, affordable AI co-pilot that combines in-cabin driver monitoring, forward collision and lane departure warnings tuned for Indian roads, predictive vehicle-health alerts and a multilingual voice interface. All video is processed on the device, so the system works without mobile coverage and protects driver privacy. The roadmap moves from research and prototyping (Months 1–9) to a 200-vehicle fleet pilot (Months 10–15), validation and certification (Months 16–21), commercial launch for fleets and the aftermarket (Months 22–27) and OEM integration (Months 28–36). It needs a team that grows from 12 to about 30 people and an estimated budget of about ₹19.8 crore, including a 15% contingency.",
+  null
+ ],
+ [
+  "h",
+  1,
+  "2. Introduction to the AI Solution Concept"
+ ],
+ [
+  "h",
+  2,
+  "2.1 The Problem"
+ ],
+ [
+  "p",
+  "Most serious crashes are not caused by a lack of vehicle capability but by a lapse in driver attention at the wrong moment. A truck driver at the end of a twelve-hour shift, a cab driver glancing at a phone for directions, or a family car meeting a two-wheeler that cuts across its lane at dusk all face a window of one or two seconds in which a timely warning can prevent a crash. Existing products only address parts of this problem. Factory-fitted ADAS can warn of a collision but is expensive and limited to higher trims. Fleet GPS trackers record where a vehicle went but not whether its driver was alert. Dash cameras record a crash after it happens but rarely help prevent it.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "2.2 The Proposed Solution"
+ ],
+ [
+  "p",
+  "Saarthi Copilot (from the Hindi word for charioteer, the trusted guide beside the driver) is a compact, windshield-mounted unit with two cameras, an automotive-grade edge AI processor and a connection to the vehicle's OBD-II port. It has five functional modules:",
+  null
+ ],
+ [
+  "b",
+  [
+   [
+    "Driver Monitoring System (DMS):",
+    "an infrared in-cabin camera tracks eye closure (PERCLOS), blink rate, yawning, head pose and gaze to detect drowsiness and distraction, including mobile phone use. Infrared illumination lets it work at night and through most sunglasses."
+   ],
+   [
+    "Forward Perception:",
+    "a forward camera runs object detection and lane estimation models trained on Indian traffic to give forward collision warnings for cars, two-wheelers, auto-rickshaws, pedestrians and animals, and lane departure warnings even where lane markings are faded or missing."
+   ],
+   [
+    "Vehicle Health Intelligence:",
+    "engine, battery and braking data from the OBD-II/CAN interface feed anomaly-detection models that predict maintenance needs before a breakdown."
+   ],
+   [
+    "Multilingual Voice Interface:",
+    "short spoken alerts and simple voice commands in Hindi, English and regional languages, designed to inform the driver without adding distraction."
+   ],
+   [
+    "Fleet and Insurer Cloud:",
+    "event-only uploads (short clips and metadata, never continuous video) power driver scorecards, coaching and consent-based usage-based insurance programmes."
+   ]
+  ]
+ ],
+ [
+  "h",
+  2,
+  "2.3 Target Customers"
+ ],
+ [
+  "p",
+  "The roadmap targets three customer groups in sequence. The first is commercial fleets such as logistics companies, ride-hailing operators, school buses and inter-city coaches, where a single crash is very costly and a business buyer can justify the investment. The second is private owners of entry and mid-segment cars, reached through an aftermarket kit. The third is vehicle manufacturers (OEMs) and Tier-1 suppliers, who can license the software stack for factory fitment once it is proven in the field.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "2.4 Design Principles"
+ ],
+ [
+  "b",
+  [
+   [
+    "Safety first:",
+    "early versions only warn the driver and never take control of steering or braking, which keeps the functional-safety scope manageable."
+   ],
+   [
+    "Edge first:",
+    "all perception runs on the device with an end-to-end latency target below 100 ms, so the system works on highways without mobile signal."
+   ],
+   [
+    "Privacy by design:",
+    "no continuous video leaves the vehicle, and drivers are informed and give consent in line with India's Digital Personal Data Protection (DPDP) Act, 2023."
+   ],
+   [
+    "Affordable:",
+    "a target bill of materials under ₹7,500 so the retail kit can be priced near ₹15,000."
+   ],
+   [
+    "Built for India:",
+    "trained and tested on Indian roads, weather, lighting and driving behaviour."
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "3. Market Analysis"
+ ],
+ [
+  "h",
+  2,
+  "3.1 Road Safety Context"
+ ],
+ [
+  "p",
+  "The World Health Organization's Global Status Report on Road Safety 2023 estimates about 1.19 million road traffic deaths each year, and road injuries are the leading cause of death for children and young people aged 5–29. India's Ministry of Road Transport and Highways (MoRTH) reported 4,61,312 accidents, 1,68,491 deaths and 4,43,366 injuries in 2022, with over-speeding identified as the leading cause of both accidents and deaths. Driver fatigue is under-reported in official statistics because it is hard to prove after a crash, yet long duty hours and night driving are widely recognised as major risk factors in trucking and inter-city bus travel. Each of these causes is a driver behaviour that an attentive AI co-pilot can detect and warn about in real time.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "3.2 The Indian Automotive Market"
+ ],
+ [
+  "p",
+  "India became the world's third-largest vehicle market by sales in 2022, behind China and the United States, and passenger-vehicle sales have exceeded four million units a year in recent years. India also has one of the world's largest commercial-vehicle and two-wheeler fleets. Safety features are spreading quickly: Level 1 and Level 2 ADAS (as defined in SAE J3016) reached mass-market Indian buyers around 2021 and are now offered on many popular SUVs and sedans. However, these features are concentrated in top variants, so most of the vehicles on Indian roads today, including almost all trucks and buses, have no active safety technology at all. This gap between rising safety awareness and limited fitment is the core market opportunity for an affordable retrofit and fleet solution.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "3.3 Regulation and Safety Ratings"
+ ],
+ [
+  "p",
+  "Regulation is moving in the same direction worldwide. The European Union's General Safety Regulation (EU) 2019/2144 made Driver Drowsiness and Attention Warning mandatory for new vehicle types from July 2022 and for all new registrations from July 2024, and Advanced Driver Distraction Warning follows from July 2024 for new types and July 2026 for all new vehicles. Euro NCAP also rewards effective driver monitoring in its ratings. In India, the Bharat New Car Assessment Programme (Bharat NCAP), in force since October 2023, has made crash safety a visible purchase criterion and is expected to extend to active safety and ADAS over time. For commercial vehicles, the AIS-140 standard already requires tracking devices and emergency buttons in public transport vehicles, which shows a willingness to mandate in-vehicle technology for safety. Together these trends make driver monitoring a feature that buyers, regulators and insurers increasingly expect.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "3.4 Competitive Landscape"
+ ],
+ [
+  "t",
+  "Competitive landscape",
+  [
+   "Category",
+   "Examples",
+   "Strengths",
+   "Gap Saarthi Copilot targets"
+  ],
+  [
+   [
+    "Factory-fitted ADAS",
+    "OEM systems from Tier-1s such as Bosch, Continental, ZF and Mobileye",
+    "Deep vehicle integration, high accuracy",
+    "Costly; limited to top trims and new vehicles"
+   ],
+   [
+    "Aftermarket collision warning",
+    "Mobileye aftermarket systems",
+    "Proven forward-collision technology",
+    "No driver monitoring; limited India-specific tuning"
+   ],
+   [
+    "Fleet video telematics",
+    "Netradyne, Lytx, Samsara",
+    "Strong fleet analytics and coaching",
+    "Priced for large fleets; cloud-heavy"
+   ],
+   [
+    "Driver monitoring specialists",
+    "Seeing Machines, Smart Eye",
+    "Accurate eye and gaze tracking",
+    "Sold to OEMs, not to fleets or owners"
+   ],
+   [
+    "Basic dashcams and GPS trackers",
+    "Many low-cost brands",
+    "Cheap and widely available",
+    "Record events but do not prevent crashes"
+   ]
+  ]
+ ],
+ [
+  "p",
+  "Saarthi Copilot's position is to combine driver monitoring, forward warnings and vehicle health in one affordable device that is trained specifically for Indian conditions, and to sell it first to fleets and owners whom factory ADAS does not reach.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "3.5 SWOT Analysis"
+ ],
+ [
+  "t",
+  null,
+  [
+   "Strengths",
+   "Weaknesses"
+  ],
+  [
+   [
+    "India-specific data and models; edge processing that works offline; DMS, ADAS and vehicle health in one low-cost unit; multilingual voice alerts",
+    "New brand with no track record; aftermarket installation varies by vehicle; small initial dataset; dependence on imported chips"
+   ]
+  ]
+ ],
+ [
+  "t",
+  null,
+  [
+   "Opportunities",
+   "Threats"
+  ],
+  [
+   [
+    "Regulatory push for driver monitoring and ADAS; rapid digitisation of fleets; insurers' interest in usage-based insurance; OEM demand for affordable software stacks",
+    "OEMs making ADAS standard on lower trims; well-funded global telematics players; chip supply shocks; privacy backlash or regulatory uncertainty"
+   ]
+  ]
+ ],
+ [
+  "h",
+  2,
+  "3.6 Business Model"
+ ],
+ [
+  "b",
+  [
+   [
+    "Hardware kit:",
+    "aftermarket retail price of about ₹14,999, with volume pricing for fleets."
+   ],
+   [
+    "Fleet subscription:",
+    "about ₹249 per vehicle per month for the dashboard, driver scorecards, coaching and over-the-air updates."
+   ],
+   [
+    "Insurer partnerships:",
+    "anonymised, consent-based driving-risk scores for usage-based insurance."
+   ],
+   [
+    "Software licensing:",
+    "a per-unit royalty from OEMs and Tier-1 suppliers for factory fitment."
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "4. Technology Trends"
+ ],
+ [
+  "h",
+  2,
+  "4.1 Automotive Edge AI Hardware"
+ ],
+ [
+  "p",
+  "Automotive-grade systems-on-chip with dedicated neural accelerators, such as NVIDIA's Jetson Orin and DRIVE platforms, Qualcomm's Snapdragon Ride, Texas Instruments' TDA4 family and Ambarella's CV series, now deliver from a few to hundreds of TOPS (trillions of operations per second) within a vehicle's power budget. The lower end of this range is enough for real-time, two-camera inference in a small aftermarket device, which was not commercially practical only a few years ago.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.2 Efficient Deep Learning Models"
+ ],
+ [
+  "p",
+  "Model compression techniques such as INT8 quantisation, pruning and knowledge distillation shrink large neural networks so that they run on low-power chips with little loss of accuracy. One-stage object detectors such as the YOLO family, lightweight backbones such as MobileNet and EfficientNet, and compact transformer variants make it practical to run detection, lane estimation and face analysis at 15–30 frames per second on edge hardware.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.3 Camera-Based Driver Monitoring"
+ ],
+ [
+  "p",
+  "Driver monitoring has moved from simple steering-pattern heuristics to infrared camera systems that track eyelids, gaze and head pose directly. Combining these visual cues with vehicle signals such as lane wandering and steering corrections improves accuracy and reduces false alarms, which is critical for driver acceptance.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.4 Software-Defined Vehicles and OTA Updates"
+ ],
+ [
+  "p",
+  "Vehicles are becoming software-defined, with features delivered and improved through over-the-air (OTA) updates. UN Regulation No. 155 (cyber security) and No. 156 (software updates) set the process requirements for this, and Saarthi Copilot will be designed around them from the start so that models can be improved safely after deployment.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.5 Conversational and Generative AI in the Cabin"
+ ],
+ [
+  "p",
+  "Manufacturers have begun adding large language model assistants to vehicles; Mercedes-Benz trialled ChatGPT in its MBUX system in 2023 and Volkswagen announced ChatGPT integration in 2024. Smaller speech and language models that run on the device now make natural voice interaction possible without a cloud connection, which matters for India's multilingual drivers and patchy highway coverage.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.6 India-Specific Data and Simulation"
+ ],
+ [
+  "p",
+  "Open datasets captured on Indian roads, such as the India Driving Dataset (IDD) from IIIT Hyderabad, include the auto-rickshaws, animals, unmarked lanes and dense mixed traffic that most Western datasets lack. Open-source simulators such as CARLA, together with synthetic data generation, allow rare and dangerous scenarios to be tested safely before road trials.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "4.7 Privacy-Preserving Learning"
+ ],
+ [
+  "p",
+  "Federated learning lets models improve using data from many vehicles without raw video ever leaving each device; only model updates are shared and combined. This fits the DPDP Act's emphasis on purpose limitation and data minimisation and helps build trust with drivers.",
+  null
+ ],
+ [
+  "h",
+  1,
+  "5. Pain Points in Current Automotive Solutions"
+ ],
+ [
+  "p",
+  "Research into current products and the Indian driving environment points to six pain points. Each is mapped to the way Saarthi Copilot responds to it.",
+  null
+ ],
+ [
+  "t",
+  "Pain points and responses",
+  [
+   "Pain point today",
+   "How Saarthi Copilot addresses it"
+  ],
+  [
+   [
+    "ADAS is limited to premium trims and new vehicles",
+    "Low-cost retrofit kit for existing cars, trucks and buses"
+   ],
+   [
+    "Systems are tuned for structured, well-marked roads",
+    "Models trained on Indian mixed traffic, animals and unmarked lanes"
+   ],
+   [
+    "Frequent false alarms lead drivers to switch features off",
+    "Fusion of camera and vehicle signals, graded alerts and a false-alert release target"
+   ],
+   [
+    "Fleet trackers show location, not driver alertness",
+    "In-cabin monitoring of fatigue, distraction and phone use"
+   ],
+   [
+    "Maintenance is reactive and breakdowns are costly",
+    "Predictive vehicle-health alerts from OBD-II data"
+   ],
+   [
+    "Alerts and interfaces are English-only and screen-heavy",
+    "Short voice alerts in Hindi, English and regional languages"
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "6. High-Level System Architecture"
+ ],
+ [
+  "p",
+  "The solution is organised into five layers. Keeping perception and decision-making on the device, and using the cloud only for analytics, training and updates, is what allows the product to be fast, private and usable in areas with weak connectivity.",
+  null
+ ],
+ [
+  "t",
+  "System layers",
+  [
+   "Layer",
+   "Main components",
+   "Key technology"
+  ],
+  [
+   [
+    "Sensing",
+    "Infrared driver camera, HDR forward camera, IMU, GPS, OBD-II/CAN link",
+    "940 nm IR illumination; HDR imaging for glare and night"
+   ],
+   [
+    "Edge inference",
+    "Automotive SoC with neural accelerator running DMS, detection, lane and anomaly models",
+    "INT8-quantised CNN/transformer models; under 100 ms latency"
+   ],
+   [
+    "Decision and HMI",
+    "Risk-scoring engine, time-to-collision estimation, voice and visual alerts",
+    "Rule-plus-ML fusion; graded alert levels"
+   ],
+   [
+    "Connectivity",
+    "4G modem, Bluetooth companion app",
+    "Event-only, encrypted uploads"
+   ],
+   [
+    "Cloud",
+    "Fleet dashboard, driver coaching, training pipeline, OTA server",
+    "MLOps, federated learning, UN R155/R156-aligned processes"
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "7. Strategic Roadmap and Timeline"
+ ],
+ [
+  "p",
+  "The roadmap spans 36 months, assuming a January 2027 start, and is divided into six phases. Each phase ends with a decision gate: the project moves forward only when that phase's milestones and success criteria are met, which limits spending before the technology and market are proven.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "7.1 Phase Plan"
+ ],
+ [
+  "t",
+  "Phase plan",
+  [
+   "Phase",
+   "Months",
+   "Key activities",
+   "Main deliverables"
+  ],
+  [
+   [
+    "0. Discovery and research",
+    "1–3",
+    "Interviews with 30+ fleet operators and drivers; literature and patent review; requirements; hardware platform selection",
+    "Product requirements document; feasibility report; reference hardware design"
+   ],
+   [
+    "1. Data and prototype",
+    "4–9",
+    "Collect and label 1,000+ hours of Indian road and in-cabin video; train first DMS and forward-perception models; build 20 prototypes",
+    "Working DMS + collision-warning prototype; labelled dataset v1; bench test results"
+   ],
+   [
+    "2. Fleet pilot",
+    "10–15",
+    "Install in 200 fleet vehicles (logistics, cabs, school buses) in Indore, Bhopal and Pune; tune alert thresholds; launch dashboard beta",
+    "Pilot report on accuracy, false alerts and driver behaviour; dashboard v1"
+   ],
+   [
+    "3. Validation and certification",
+    "16–21",
+    "ISO 26262-aligned safety process and ISO 21448 (SOTIF) analysis; cybersecurity assessment; EMC and environmental tests at ARAI/ICAT; DPDP review",
+    "Test reports and certificates; safety case; production hardware v2"
+   ],
+   [
+    "4. Commercial launch",
+    "22–27",
+    "Launch fleet subscription and aftermarket kit; installer network in 10 cities; insurer pilot; add vehicle-health module",
+    "5,000 units deployed; first insurer partnership"
+   ],
+   [
+    "5. OEM integration and scale",
+    "28–36",
+    "Licensing deal with a Tier-1 or OEM; OTA platform; multilingual voice assistant; federated learning",
+    "Signed OEM/Tier-1 agreement; 25,000 active units; platform v3"
+   ]
+  ]
+ ],
+ [
+  "h",
+  2,
+  "7.2 Key Milestones"
+ ],
+ [
+  "t",
+  "Milestones",
+  [
+   "#",
+   "Milestone",
+   "Month",
+   "Success criteria"
+  ],
+  [
+   [
+    "M1",
+    "Requirements frozen",
+    "3",
+    "Requirements signed off; hardware platform selected"
+   ],
+   [
+    "M2",
+    "Dataset v1 complete",
+    "7",
+    "1,000+ hours labelled across day/night, city/highway and varied weather"
+   ],
+   [
+    "M3",
+    "Prototype ready",
+    "9",
+    "Drowsiness recall ≥ 90% on test set; warning latency < 150 ms"
+   ],
+   [
+    "M4",
+    "Pilot live",
+    "11",
+    "200 vehicles installed; device uptime ≥ 95%"
+   ],
+   [
+    "M5",
+    "Pilot results",
+    "15",
+    "< 1 false alert per driving hour; 20% fewer harsh-braking events"
+   ],
+   [
+    "M6",
+    "Certified hardware",
+    "21",
+    "Required AIS, EMC and environmental tests passed; safety case documented"
+   ],
+   [
+    "M7",
+    "Commercial launch",
+    "22",
+    "Product on sale with installer network in 10 cities"
+   ],
+   [
+    "M8",
+    "OEM / Tier-1 agreement",
+    "30",
+    "First software licensing contract signed"
+   ],
+   [
+    "M9",
+    "Scale target",
+    "36",
+    "25,000 active units; positive unit economics"
+   ]
+  ]
+ ],
+ [
+  "h",
+  2,
+  "7.3 Roadmap Chart"
+ ],
+ [
+  "img",
+  0,
+  "Phases and milestones over 36 months"
+ ],
+ [
+  "h",
+  1,
+  "8. Resource Estimates"
+ ],
+ [
+  "h",
+  2,
+  "8.1 Team Plan"
+ ],
+ [
+  "t",
+  "Team size by phase",
+  [
+   "Role",
+   "Phases 0–1 (M1–9)",
+   "Phases 2–3 (M10–21)",
+   "Phases 4–5 (M22–36)"
+  ],
+  [
+   [
+    "Product and programme management",
+    "1",
+    "2",
+    "3"
+   ],
+   [
+    "Computer vision / ML engineers",
+    "4",
+    "6",
+    "7"
+   ],
+   [
+    "Embedded and firmware engineers",
+    "3",
+    "4",
+    "4"
+   ],
+   [
+    "Hardware and electronics engineers",
+    "2",
+    "2",
+    "2"
+   ],
+   [
+    "Cloud, backend and app developers",
+    "1",
+    "3",
+    "5"
+   ],
+   [
+    "Data annotation and QA leads",
+    "1",
+    "2",
+    "3"
+   ],
+   [
+    "Functional safety and cybersecurity",
+    "0",
+    "2",
+    "2"
+   ],
+   [
+    "Field operations and customer success",
+    "0",
+    "1",
+    "4"
+   ],
+   [
+    "Total headcount",
+    "12",
+    "22",
+    "30"
+   ]
+  ]
+ ],
+ [
+  "p",
+  "Bulk data labelling is outsourced to an annotation partner and managed by the in-house annotation and QA leads. Over 36 months the plan adds up to about 68.5 person-years of effort.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "8.2 Budget Estimate"
+ ],
+ [
+  "t",
+  "Three-year budget",
+  [
+   "Cost head",
+   "Estimate (₹ crore)"
+  ],
+  [
+   [
+    "Personnel (about 68.5 person-years at an average loaded cost of ₹15 lakh)",
+    "10.28"
+   ],
+   [
+    "Hardware development, prototypes and 200 pilot units",
+    "0.70"
+   ],
+   [
+    "Data collection and annotation",
+    "1.20"
+   ],
+   [
+    "Cloud computing, GPU training and MLOps",
+    "0.80"
+   ],
+   [
+    "Testing, certification and safety assessment",
+    "1.50"
+   ],
+   [
+    "Pilot operations and field support",
+    "0.80"
+   ],
+   [
+    "Go-to-market, installer network and partnerships",
+    "1.50"
+   ],
+   [
+    "Legal, IP and data-protection compliance",
+    "0.40"
+   ],
+   [
+    "Subtotal",
+    "17.18"
+   ],
+   [
+    "Contingency (15%)",
+    "2.58"
+   ],
+   [
+    "Total estimated budget",
+    "19.76"
+   ]
+  ]
+ ],
+ [
+  "p",
+  "A practical funding path is a seed round of about ₹6 crore to cover Phases 0–2, followed by a larger round once pilot results (Milestone M5) prove the product's accuracy and value to fleets.",
+  null
+ ],
+ [
+  "h",
+  2,
+  "8.3 Hardware and Infrastructure"
+ ],
+ [
+  "b",
+  [
+   "Edge AI development kits from two shortlisted chip vendors, to avoid single-supplier risk.",
+   "Two leased test vehicles fitted with reference sensors for data collection and validation.",
+   "Cloud GPU capacity for model training, plus a local workstation for fast experiments.",
+   "Annotation, dataset-versioning and experiment-tracking tools as part of an MLOps pipeline.",
+   "Booked test-track time and lab slots at ARAI or ICAT for certification testing."
+  ]
+ ],
+ [
+  "h",
+  2,
+  "8.4 Unit Economics"
+ ],
+ [
+  "t",
+  "Unit economics",
+  [
+   "Item",
+   "Estimate"
+  ],
+  [
+   [
+    "Bill of materials (compute module, two cameras, IR LEDs, enclosure, 4G modem)",
+    "₹7,500"
+   ],
+   [
+    "Assembly, testing and packaging",
+    "₹1,000"
+   ],
+   [
+    "Target retail price (aftermarket kit, including GST)",
+    "₹14,999"
+   ],
+   [
+    "Fleet subscription",
+    "₹249 per vehicle per month"
+   ],
+   [
+    "Gross margin target",
+    "About 30% on hardware at launch; 70%+ on subscriptions"
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "9. Potential Challenges and Risk Mitigation"
+ ],
+ [
+  "p",
+  "The main challenges are technical (accuracy in Indian conditions), human (alert fatigue and privacy), regulatory and commercial. Table 9 lists them with their likelihood, impact and planned mitigation.",
+  null
+ ],
+ [
+  "t",
+  "Risk register",
+  [
+   "Risk",
+   "Likelihood",
+   "Impact",
+   "Mitigation"
+  ],
+  [
+   [
+    "Poor accuracy in glare, dust, rain, night and unmarked roads",
+    "High",
+    "High",
+    "India-specific dataset; HDR cameras; scenario-based test suite; continuous learning from the pilot"
+   ],
+   [
+    "Alert fatigue from false warnings",
+    "High",
+    "High",
+    "Fuse camera and vehicle signals; graded alerts; false alerts per hour as a release gate"
+   ],
+   [
+    "Privacy concerns and driver resistance",
+    "Medium",
+    "High",
+    "On-device processing; event-only uploads; clear consent; drivers see their own data; coaching, not punishment"
+   ],
+   [
+    "Certification and regulatory delays",
+    "Medium",
+    "Medium",
+    "Engage ARAI/ICAT early; design to AIS and UN R155/R156 from the start; time buffer in Phase 3"
+   ],
+   [
+    "Chip supply and cost volatility",
+    "Medium",
+    "Medium",
+    "Qualify two chip vendors; modular compute board; buffer stock"
+   ],
+   [
+    "Heat and durability failures in hot cabins",
+    "Medium",
+    "High",
+    "Automotive-grade parts; thermal design validated during a summer pilot"
+   ],
+   [
+    "Cyber attacks on connected units",
+    "Low",
+    "High",
+    "Secure boot, encrypted storage, signed OTA updates, regular penetration testing"
+   ],
+   [
+    "Liability if a warning is missed",
+    "Low",
+    "High",
+    "Position as a warning-only driver aid; clear user communication; product liability insurance; documented safety case"
+   ],
+   [
+    "Competitive response from OEMs and global players",
+    "Medium",
+    "Medium",
+    "Focus on retrofit and fleets; India-specific advantage; OEM licensing as a partnership route"
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "10. Success Metrics"
+ ],
+ [
+  "t",
+  "KPIs",
+  [
+   "Area",
+   "Key performance indicator",
+   "Target"
+  ],
+  [
+   [
+    "Safety performance",
+    "Drowsiness detection recall",
+    "≥ 95% at launch"
+   ],
+   [
+    "Safety performance",
+    "False alerts",
+    "< 1 per driving hour"
+   ],
+   [
+    "Safety performance",
+    "End-to-end warning latency",
+    "< 100 ms"
+   ],
+   [
+    "Fleet impact",
+    "Harsh-braking and near-miss events",
+    "20% reduction within 3 months of installation"
+   ],
+   [
+    "Reliability",
+    "Device uptime",
+    "≥ 98%"
+   ],
+   [
+    "Adoption",
+    "Active units by Month 36",
+    "25,000"
+   ],
+   [
+    "User experience",
+    "Driver satisfaction (survey)",
+    "≥ 4 out of 5"
+   ],
+   [
+    "Commercial",
+    "Annual fleet renewal rate",
+    "≥ 85%"
+   ]
+  ]
+ ],
+ [
+  "h",
+  1,
+  "11. Conclusion"
+ ],
+ [
+  "p",
+  "India's road-safety challenge is driven largely by human factors that AI can now detect in real time and at low cost. Saarthi Copilot brings together driver monitoring, India-tuned forward warnings, predictive vehicle health and multilingual voice alerts in a single edge-AI device, targeting the large share of vehicles that factory ADAS does not reach. The roadmap reduces risk by proving accuracy and driver acceptance in a 200-vehicle pilot before certification and launch, and by gating each phase on clear, measurable milestones. With a team growing to about 30 people and an estimated budget of about ₹19.8 crore over three years, the plan aims to reach 25,000 active units and a first OEM partnership by Month 36. Its success depends most on three things: model accuracy in Indian conditions, a very low false-alert rate, and earning drivers' trust through strong privacy protections.",
+  null
+ ],
+ [
+  "h",
+  1,
+  "References"
+ ],
+ [
+  "p",
+  "[1]  World Health Organization (2023). Global Status Report on Road Safety 2023. Geneva: WHO.",
+  null
+ ],
+ [
+  "p",
+  "[2]  Ministry of Road Transport and Highways, Government of India (2023). Road Accidents in India 2022. New Delhi: MoRTH.",
+  null
+ ],
+ [
+  "p",
+  "[3]  Regulation (EU) 2019/2144 of the European Parliament and of the Council on type-approval requirements for motor vehicles (General Safety Regulation). Official Journal of the European Union, 2019.",
+  null
+ ],
+ [
+  "p",
+  "[4]  Euro NCAP. Assessment Protocols – Safety Assist (2023 onwards). European New Car Assessment Programme.",
+  null
+ ],
+ [
+  "p",
+  "[5]  Ministry of Road Transport and Highways (2023). Bharat New Car Assessment Programme (Bharat NCAP).",
+  null
+ ],
+ [
+  "p",
+  "[6]  Automotive Research Association of India. AIS-140: Intelligent Transportation Systems – Requirements for Public Transport Vehicle Operation.",
+  null
+ ],
+ [
+  "p",
+  "[7]  Government of India (2023). The Digital Personal Data Protection Act, 2023.",
+  null
+ ],
+ [
+  "p",
+  "[8]  SAE International (2021). J3016: Taxonomy and Definitions for Terms Related to Driving Automation Systems for On-Road Motor Vehicles.",
+  null
+ ],
+ [
+  "p",
+  "[9]  ISO 26262:2018. Road vehicles – Functional safety. International Organization for Standardization.",
+  null
+ ],
+ [
+  "p",
+  "[10]  ISO 21448:2022. Road vehicles – Safety of the intended functionality. International Organization for Standardization.",
+  null
+ ],
+ [
+  "p",
+  "[11]  UNECE (2021). UN Regulation No. 155 (Cyber security and cyber security management system) and UN Regulation No. 156 (Software update and software update management system).",
+  null
+ ],
+ [
+  "p",
+  "[12]  Varma, G., Subramanian, A., Namboodiri, A., Chandraker, M. and Jawahar, C. V. (2019). IDD: A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments. IEEE Winter Conference on Applications of Computer Vision (WACV).",
+  null
+ ],
+ [
+  "p",
+  "[13]  Dosovitskiy, A., Ros, G., Codevilla, F., López, A. and Koltun, V. (2017). CARLA: An Open Urban Driving Simulator. Conference on Robot Learning (CoRL).",
+  null
+ ]
+]
